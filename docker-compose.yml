@@ -5,9 +5,10 @@ services:
 
     image: breedbase/breedbase:v1.03
 
-    container_name: breedbase_ars_soybean_db
+    container_name: breedbase_ars_soybean_web
+    restart: always
     ports:
-      - 8102:8080
+      - 8104:8080
     volumes:
       - webdata:/home/production/volume
       - type: bind
