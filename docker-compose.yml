@@ -10,7 +10,9 @@ services:
     ports:
       - 8104:8080
     volumes:
-      - webdata:/home/production/volume
+      - type: bind
+        source: /export/prod/public_ars_soybean
+        target: /home/production/volume
       - type: bind
         source: empty_db_without.test_users.sql
         target: /home/production/empty_dump.sql
